@@ -6,7 +6,7 @@
 #    By: akliek <akliek@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/07/16 17:01:47 by akliek            #+#    #+#              #
-#    Updated: 2021/07/16 18:06:33 by akliek           ###   ########.fr        #
+#    Updated: 2021/10/11 11:06:06 by akliek           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,10 +16,19 @@ CC = gcc
 
 CFLAGS = -c -Wall -Werror -Wextra
 
-HEADER = ft_printf.h
-
-SRC = libft/*.c \
-	*.c
+SRC = ft_printf.c	\
+	conversions.c	\
+	printnum.c	\
+	printstr.c	\
+	printhex.c	\
+	printchar.c	\
+	libft/ft_isdigit.c	\
+	libft/ft_itoa.c	\
+	libft/ft_putstr_fd.c	\
+	libft/ft_strchr.c	\
+	libft/ft_strdup.c	\
+	libft/ft_strlen.c	\
+	libft/ft_strncmp.c
 
 OBJ = $(SRC:.c=.o)
 
@@ -34,7 +43,7 @@ bonus:
 		ar rc $(NAME) *.o
 
 clean:
-		rm -rf *.o libft.h.gch
+		rm -rf *.o
 
 fclean: clean
 		rm -rf $(NAME)
