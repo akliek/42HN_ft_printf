@@ -25,7 +25,7 @@ Then go to created repository and run following command:
 make
 ```
 # How to use?
-For using "ft_printf" function in your projects include ft_printf header and compile it with following command:
+For using "ft_printf" function in your projects include ft_printf.h header and compile it with following command:
 ```
 gcc your_files.c <path_to_libftprintf.a>
 ```
